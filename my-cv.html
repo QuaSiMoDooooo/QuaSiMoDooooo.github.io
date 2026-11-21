@@ -3,13 +3,13 @@ layout: default
 title: My CV
 navbar_title: My-CV
 ---
-<link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}?v=5">
+<link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}?v=6">
 <div class="cv-toolbar">
   <div class="cv-language" role="group" aria-label="CV language">
     <button type="button" data-set-language="en" aria-pressed="true">English</button>
     <button type="button" data-set-language="zh" aria-pressed="false">中文</button>
   </div>
-  <a class="cv-download" id="cv-download" href="{{ '/assets/cv/tian-wu-cv-en.pdf?v=4' | relative_url }}" data-en-href="{{ '/assets/cv/tian-wu-cv-en.pdf?v=4' | relative_url }}" data-zh-href="{{ '/assets/cv/tian-wu-cv-zh.pdf?v=4' | relative_url }}" download><i class="fas fa-download" aria-hidden="true"></i> <span data-en="Download PDF" data-zh="下载 PDF">Download PDF</span></a>
+  <a class="cv-download" id="cv-download" href="{{ '/assets/cv/tian-wu-cv-en.pdf?v=5' | relative_url }}" data-en-href="{{ '/assets/cv/tian-wu-cv-en.pdf?v=5' | relative_url }}" data-zh-href="{{ '/assets/cv/tian-wu-cv-zh.pdf?v=5' | relative_url }}" download><i class="fas fa-download" aria-hidden="true"></i> <span data-en="Download PDF" data-zh="下载 PDF">Download PDF</span></a>
 </div>
 <article class="cv-sheet">
   <header class="cv-header">
@@ -34,7 +34,7 @@ navbar_title: My-CV
     <div class="cv-education">
       <img src="{{ item.logo | relative_url }}" alt="" width="36" height="36">
       <div><h3 data-en="{{ item.name | escape }}" data-zh="{% if forloop.index == 1 %}中山大学{% elsif forloop.index == 2 %}华中农业大学{% else %}武汉理工大学{% endif %}">{{ item.name }}</h3>
-      <p data-en="{% if forloop.index == 1 %}School of Agriculture and Biotechnology · PhD{% elsif forloop.index == 2 %}College of Informatics · Master of Bioinformatics{% else %}Dual Bachelor's degrees in Pharmaceutical Engineering and Biochemistry{% endif %}" data-zh="{% if forloop.index == 1 %}农学院 · 博士{% elsif forloop.index == 2 %}信息学院 · 生物信息学硕士{% else %}制药工程和生物化学双学士{% endif %}">{% if item.dept %}{{ item.dept }} · {% endif %}{{ item.position }}</p></div>
+      <p data-en="{% if forloop.index == 1 %}School of Agriculture and Biotechnology · PhD in Bioinformatics{% elsif forloop.index == 2 %}College of Informatics · Master of Bioinformatics{% else %}Dual Bachelor's degrees in Pharmaceutical Engineering and Biochemistry{% endif %}" data-zh="{% if forloop.index == 1 %}农业与生物技术学院 生物信息学方向 博士{% elsif forloop.index == 2 %}信息学院 · 生物信息学硕士{% else %}制药工程和生物化学双学士{% endif %}">{% if forloop.index == 1 %}School of Agriculture and Biotechnology · PhD in Bioinformatics{% else %}{% if item.dept %}{{ item.dept }} · {% endif %}{{ item.position }}{% endif %}</p></div>
       <time data-en="{{ item.date }}" data-zh="{% if forloop.index == 1 %}2026 年 9 月至今{% elsif forloop.index == 2 %}2023 年 9 月—2026 年 6 月{% else %}2019 年 9 月—2023 年 6 月{% endif %}">{{ item.date }}</time>
     </div>
     {% endfor %}
@@ -50,17 +50,17 @@ navbar_title: My-CV
     </ol>
     <h3 class="cv-subheading" data-en="Patent" data-zh="专利">Patent</h3>
     <div class="cv-certificate">
-      <a href="{{ '/assets/images/cv/patent.jpg' | relative_url }}" target="_blank"><img src="{{ '/assets/images/cv/patent.jpg' | relative_url }}" alt="Invention patent certificate"></a>
-      <div><strong data-en="A scoring and recommendation method for traditional Chinese medicines based on Mendelian randomization" data-zh="一种基于孟德尔随机化的中药打分推荐方法">A scoring and recommendation method for traditional Chinese medicines based on Mendelian randomization</strong><p data-en="Invention patent · ZL 2023 1 1646071.4 · Granted 2 Jun 2026" data-zh="发明专利 · ZL 2023 1 1646071.4 · 授权公告日 2026 年 6 月 2 日">Invention patent · ZL 2023 1 1646071.4 · Granted 2 Jun 2026</p><p data-en="Inventors: Xiaohui Niu, Tian Wu, Jing Gong, Lu Shi, Yuqing Yan" data-zh="发明人：牛晓辉、吴天、龚静、石路、严昱晴">Inventors: Xiaohui Niu, Tian Wu, Jing Gong, Lu Shi, Yuqing Yan</p><p data-en="Patent holder: Huazhong Agricultural University" data-zh="专利权人：华中农业大学">Patent holder: Huazhong Agricultural University</p></div>
+      <a href="{{ '/assets/images/cv/patent-summary.jpg' | relative_url }}" target="_blank"><img src="{{ '/assets/images/cv/patent-summary.jpg' | relative_url }}" alt="Invention patent certificate"></a>
+      <div><strong data-en="A scoring and recommendation method for traditional Chinese medicines based on Mendelian randomization" data-zh="一种基于孟德尔随机化的中药打分推荐方法">A scoring and recommendation method for traditional Chinese medicines based on Mendelian randomization</strong><p data-en="Invention patent · ZL 2023 1 1646071.4 · Granted 2 Jun 2026" data-zh="发明专利 · ZL 2023 1 1646071.4 · 授权公告日 2026 年 6 月 2 日">Invention patent · ZL 2023 1 1646071.4 · Granted 2 Jun 2026</p></div>
     </div>
     <h3 class="cv-subheading" data-en="Software Copyrights" data-zh="软件著作权">Software Copyrights</h3>
     <div class="cv-certificate">
-      <a href="{{ '/assets/images/cv/tcm-copyright.jpg' | relative_url }}" target="_blank"><img src="{{ '/assets/images/cv/tcm-copyright.jpg' | relative_url }}" alt="Software copyright registration certificate"></a>
-      <div><strong data-en="Platform for Recommending Potential Traditional Chinese Medicine Prescriptions for Diseases V1.0" data-zh="疾病潜在中药处方推荐平台 V1.0">Platform for Recommending Potential Traditional Chinese Medicine Prescriptions for Diseases V1.0</strong><p>2024SR0533378 · 2024</p><p data-en="Copyright holder: Huazhong Agricultural University" data-zh="著作权人：华中农业大学">Copyright holder: Huazhong Agricultural University</p></div>
+      <a href="{{ '/assets/images/cv/tcm-copyright-summary.jpg' | relative_url }}" target="_blank"><img src="{{ '/assets/images/cv/tcm-copyright-summary.jpg' | relative_url }}" alt="Software copyright registration certificate"></a>
+      <div><strong data-en="Platform for Recommending Potential Traditional Chinese Medicine Prescriptions for Diseases V1.0" data-zh="疾病潜在中药处方推荐平台 V1.0">Platform for Recommending Potential Traditional Chinese Medicine Prescriptions for Diseases V1.0</strong><p>2024SR0533378 · 2024</p></div>
     </div>
     <div class="cv-certificate">
-      <a href="{{ '/assets/images/cv/animal-mnv-copyright.jpg' | relative_url }}" target="_blank"><img src="{{ '/assets/images/cv/animal-mnv-copyright.jpg' | relative_url }}" alt="Animal-MNVdb software copyright registration certificate"></a>
-      <div><strong data-en="Multinucleotide Variant Database Platform for Multiple Animal Species (Animal-MNVdb) V1.0" data-zh="多个动物物种的多核苷酸变异数据库平台（Animal-MNVdb）V1.0">Multinucleotide Variant Database Platform for Multiple Animal Species (Animal-MNVdb) V1.0</strong><p>2026SR0290092 · 2026</p><p data-en="Copyright holder: Huazhong Agricultural University" data-zh="著作权人：华中农业大学">Copyright holder: Huazhong Agricultural University</p></div>
+      <a href="{{ '/assets/images/cv/animal-mnv-copyright-summary.jpg' | relative_url }}" target="_blank"><img src="{{ '/assets/images/cv/animal-mnv-copyright-summary.jpg' | relative_url }}" alt="Animal-MNVdb software copyright registration certificate"></a>
+      <div><strong data-en="Multinucleotide Variant Database Platform for Multiple Animal Species (Animal-MNVdb) V1.0" data-zh="多个动物物种的多核苷酸变异数据库平台（Animal-MNVdb）V1.0">Multinucleotide Variant Database Platform for Multiple Animal Species (Animal-MNVdb) V1.0</strong><p>2026SR0290092 · 2026</p></div>
     </div>
   </section>
   <section class="cv-section">
@@ -79,7 +79,7 @@ navbar_title: My-CV
     <p data-en="My research interests include computational genomics, precision medicine, synthetic biology, and biopharmaceutical research and development. My work spans algorithms, models, online analysis platforms, databases, AI agents, and multi-omics analysis." data-zh="我感兴趣的研究方向为计算基因组、精准医疗、合成生物以及生物医药研发，我的工作涵盖算法、模型、在线分析平台、数据库、AI agent 的开发以及基于多组学的分析。">My research interests include computational genomics, precision medicine, synthetic biology, and biopharmaceutical research and development. My work spans algorithms, models, online analysis platforms, databases, AI agents, and multi-omics analysis.</p>
     <div class="cv-skill-groups">
       <div><h3 data-en="Research &amp; Development" data-zh="研究与开发">Research &amp; Development</h3><div class="cv-tags"><span data-en="Algorithms" data-zh="算法">Algorithms</span><span data-en="Models" data-zh="模型">Models</span><span data-en="Online Analysis Platforms" data-zh="在线分析平台">Online Analysis Platforms</span><span data-en="Databases" data-zh="数据库">Databases</span><span>AI Agent</span><span data-en="Multi-omics" data-zh="多组学">Multi-omics</span><span data-en="Genome Assembly &amp; Pangenomics" data-zh="基因组组装与泛基因组">Genome Assembly &amp; Pangenomics</span><span data-en="Population Genetics" data-zh="群体遗传">Population Genetics</span><span data-en="Protein &amp; Small-molecule Design" data-zh="蛋白质与小分子设计">Protein &amp; Small-molecule Design</span></div></div>
-      <div><h3 data-en="Programming &amp; Web Development" data-zh="编程与网站开发">Programming &amp; Web Development</h3><div class="cv-tags"><span>R</span><span>Python</span><span>Linux</span><span>Vue</span><span>Nuxt3</span><span>Flask</span><span>AngularJS</span><span>MongoDB</span><span>PostgreSQL</span></div></div>
+      <div><h3 data-en="Programming &amp; Web Architecture" data-zh="编程与网站架构">Programming &amp; Web Architecture</h3><div class="cv-tags"><span>R</span><span>Python</span><span>Linux</span><span>Vue</span><span>Nuxt3</span><span>Flask</span><span>AngularJS</span><span>MongoDB</span><span>PostgreSQL</span></div></div>
       <div><h3 data-en="Qualifications" data-zh="语言与资格">Qualifications</h3><div class="cv-tags"><span data-en="CET-6 · 587" data-zh="英语 CET-6 · 587 分">CET-6 · 587</span><span data-en="National Computer Rank Examination · Level 2" data-zh="全国计算机等级考试二级">National Computer Rank Examination · Level 2</span><span data-en="Mandarin Proficiency · Level 2-A" data-zh="普通话二级甲等">Mandarin Proficiency · Level 2-A</span></div></div>
     </div>
   </section>
