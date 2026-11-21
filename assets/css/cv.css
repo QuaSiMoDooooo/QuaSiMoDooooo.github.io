@@ -15,10 +15,11 @@
 .cv-download { background: #215e89; color: white; }
 .cv-download:hover, .cv-download:focus { color: white; text-decoration: none; background: #194e73; }
 .cv-sheet { max-width: 960px; margin: 0 auto 3rem; padding: clamp(1.25rem, 4vw, 3.5rem); border: 1px solid #dce6ed; border-radius: 12px; background: white; box-shadow: 0 6px 25px rgba(38, 59, 76, 0.06); color: #213243; }
-.cv-header { display: flex; align-items: center; justify-content: center; gap: 1.25rem; padding-bottom: 1.5rem; border-bottom: 2px solid #295f7e; }
+.cv-header { display: grid; grid-template-columns: 104px max-content minmax(0, 1fr); align-items: center; gap: 1.25rem; padding-bottom: 1.5rem; border-bottom: 2px solid #295f7e; }
 .cv-heading { display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; min-height: 104px; text-align: center; }
 .cv-header h1 { margin: 0; font-size: clamp(2.25rem, 3.6vw, 2.85rem); line-height: 1.05; }
 .cv-major { margin: 0; color: #526574; font-size: 1.125rem; line-height: 1.25; }
+.cv-introduction { margin: 0; font-size: .95rem; line-height: 1.5; }
 .cv-avatar { flex: 0 0 auto; border: 4px solid #edf4f7; border-radius: 50%; object-fit: cover; }
 .cv-section { margin-top: 1.8rem; }
 .cv-section h2 { margin: 0 0 1rem; padding-bottom: .45rem; border-bottom: 1px solid #dce6ed; color: #245c79; font-size: 1.15rem; }
@@ -48,6 +49,8 @@
 .cv-internship { display: flex; justify-content: space-between; gap: 1rem; }
 .cv-internship + p { margin: .3rem 0 0; }
 @media (max-width: 575px) {
+    .cv-header { grid-template-columns: 80px minmax(0, 1fr); }
+    .cv-introduction { grid-column: 1 / -1; }
     .cv-details { grid-template-columns: 1fr; }
     .cv-education { grid-template-columns: 36px minmax(0, 1fr); }
     .cv-education time { grid-column: 2; }
@@ -61,7 +64,8 @@
     .navbar, footer, .cv-toolbar { display: none !important; }
     main.container-lg { max-width: none; width: 100%; padding: 0; }
     .cv-sheet { margin: 0; padding: 0; max-width: none; border: 0; box-shadow: none; font-size: 9pt; }
-    .cv-header { padding-bottom: .5rem; }
+    .cv-header { grid-template-columns: 68px max-content minmax(0, 1fr); gap: .8rem; padding-bottom: .5rem; }
+    .cv-introduction { grid-column: auto; font-size: 8pt; line-height: 1.35; }
     .cv-header h1 { font-size: 19pt; }
     .cv-avatar { width: 68px; height: 68px; }
     .cv-heading { min-height: 68px; gap: .25rem; }
