@@ -219,7 +219,8 @@ div.lazy {
 
 .profile-sidebar__contact a {
     color: var(--profile-accent);
-    overflow-wrap: anywhere;
+    font-size: 0.875rem;
+    white-space: nowrap;
 }
 
 .profile-sidebar__social {
@@ -274,4 +275,14 @@ div.lazy {
     color: var(--profile-muted);
     font-size: 0.875rem;
     font-weight: 600;
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .profile-sidebar {
+        padding-inline: 0.75rem;
+    }
+
+    .profile-sidebar__contact li {
+        gap: 0.375rem;
+    }
 }
