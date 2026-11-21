@@ -1,0 +1,93 @@
+---
+layout: default
+title: My CV
+navbar_title: My-CV
+---
+<link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}">
+<div class="cv-toolbar">
+  <div class="cv-language" role="group" aria-label="CV language">
+    <button type="button" data-set-language="en" aria-pressed="true">English</button>
+    <button type="button" data-set-language="zh" aria-pressed="false">中文</button>
+  </div>
+  <a class="cv-download" id="cv-download" href="{{ '/assets/cv/tian-wu-cv-en.pdf' | relative_url }}" data-en-href="{{ '/assets/cv/tian-wu-cv-en.pdf' | relative_url }}" data-zh-href="{{ '/assets/cv/tian-wu-cv-zh.pdf' | relative_url }}" download><i class="fas fa-download" aria-hidden="true"></i> <span data-en="Download PDF" data-zh="下载 PDF">Download PDF</span></a>
+</div>
+<article class="cv-sheet">
+  <header class="cv-header">
+    <div>
+      <p class="cv-eyebrow" data-en="CURRICULUM VITAE" data-zh="个人简历">CURRICULUM VITAE</p>
+      <h1 data-en="Tian Wu" data-zh="吴天">Tian Wu</h1>
+      <p class="cv-subtitle" data-en="PhD student · Bioinformatics" data-zh="博士研究生 · 生物信息学">PhD student · Bioinformatics</p>
+    </div>
+    <img src="{{ site.data.profile.portrait_url | relative_url }}" class="cv-avatar" alt="Tian Wu" width="104" height="104">
+  </header>
+  <section class="cv-section">
+    <h2 data-en="Personal Details" data-zh="基本资料">Personal Details</h2>
+    <dl class="cv-details">
+      <div><dt data-en="Name" data-zh="姓名">Name</dt><dd data-en="Tian Wu" data-zh="吴天">Tian Wu</dd></div>
+      <div><dt data-en="Major" data-zh="专业">Major</dt><dd data-en="Bioinformatics" data-zh="生物信息学">Bioinformatics</dd></div>
+      <div><dt data-en="Date of birth" data-zh="出生日期">Date of birth</dt><dd data-en="12 Oct 2001" data-zh="2001 年 10 月 12 日">12 Oct 2001</dd></div>
+      <div><dt data-en="Place of origin" data-zh="籍贯">Place of origin</dt><dd data-en="Wuhan, Hubei, China" data-zh="湖北武汉">Wuhan, Hubei, China</dd></div>
+    </dl>
+  </section>
+  <section class="cv-section">
+    <h2 data-en="Education" data-zh="教育经历">Education</h2>
+    {% for item in site.data.profile.education %}
+    <div class="cv-education">
+      <img src="{{ item.logo | relative_url }}" alt="" width="36" height="36">
+      <div><h3 data-en="{{ item.name | escape }}" data-zh="{% if forloop.index == 1 %}中山大学{% elsif forloop.index == 2 %}华中农业大学{% else %}武汉理工大学{% endif %}">{{ item.name }}</h3>
+      <p data-en="{% if forloop.index == 1 %}School of Agriculture and Biotechnology · PhD{% elsif forloop.index == 2 %}College of Informatics · Master of Bioinformatics{% else %}Dual Bachelor's degrees in Pharmaceutical Engineering and Biochemistry{% endif %}" data-zh="{% if forloop.index == 1 %}农学院 · 博士{% elsif forloop.index == 2 %}信息学院 · 生物信息学硕士{% else %}制药工程和生物化学双学士{% endif %}">{% if item.dept %}{{ item.dept }} · {% endif %}{{ item.position }}</p></div>
+      <time data-en="{{ item.date }}" data-zh="{% if forloop.index == 1 %}2026 年 9 月至今{% elsif forloop.index == 2 %}2023 年 9 月—2026 年 6 月{% else %}2019 年 9 月—2023 年 6 月{% endif %}">{{ item.date }}</time>
+    </div>
+    {% endfor %}
+  </section>
+  <section class="cv-section">
+    <h2 data-en="Research Outputs" data-zh="科研成果">Research Outputs</h2>
+    <h3 class="cv-subheading" data-en="Publications" data-zh="论文">Publications</h3>
+    {% assign papers = site.publications | sort: "date" | reverse %}
+    <ol class="cv-publications">
+      {% for item in papers %}
+      <li>{% if item.cover %}<img src="{{ item.cover | relative_url }}" alt="" class="cv-paper-image">{% endif %}<div><strong>{{ item.title }}</strong><p>{% include widgets/author_list.html authors=item.authors %}</p><p><em>{{ item.pub }}</em> · {{ item.pub_date }} · <a href="{{ item.links.DOI }}">DOI</a></p></div></li>
+      {% endfor %}
+    </ol>
+    <h3 class="cv-subheading" data-en="Patent" data-zh="专利">Patent</h3>
+    <div class="cv-certificate">
+      <a href="{{ '/assets/images/cv/patent.jpg' | relative_url }}" target="_blank"><img src="{{ '/assets/images/cv/patent.jpg' | relative_url }}" alt="Invention patent certificate"></a>
+      <div><strong data-en="A scoring and recommendation method for traditional Chinese medicines based on Mendelian randomization" data-zh="一种基于孟德尔随机化的中药打分推荐方法">A scoring and recommendation method for traditional Chinese medicines based on Mendelian randomization</strong><p data-en="Invention patent · ZL 2023 1 1646071.4 · Granted 2 Jun 2026" data-zh="发明专利 · ZL 2023 1 1646071.4 · 授权公告日 2026 年 6 月 2 日">Invention patent · ZL 2023 1 1646071.4 · Granted 2 Jun 2026</p><p data-en="Inventors: Xiaohui Niu, Tian Wu, Jing Gong, Lu Shi, Yuqing Yan" data-zh="发明人：牛晓辉、吴天、龚静、石路、严昱晴">Inventors: Xiaohui Niu, Tian Wu, Jing Gong, Lu Shi, Yuqing Yan</p><p data-en="Patent holder: Huazhong Agricultural University" data-zh="专利权人：华中农业大学">Patent holder: Huazhong Agricultural University</p></div>
+    </div>
+    <h3 class="cv-subheading" data-en="Software Copyrights" data-zh="软件著作权">Software Copyrights</h3>
+    <div class="cv-certificate">
+      <a href="{{ '/assets/images/cv/tcm-copyright.jpg' | relative_url }}" target="_blank"><img src="{{ '/assets/images/cv/tcm-copyright.jpg' | relative_url }}" alt="Software copyright registration certificate"></a>
+      <div><strong data-en="Platform for Recommending Potential Traditional Chinese Medicine Prescriptions for Diseases V1.0" data-zh="疾病潜在中药处方推荐平台 V1.0">Platform for Recommending Potential Traditional Chinese Medicine Prescriptions for Diseases V1.0</strong><p>2024SR0533378 · 2024</p><p data-en="Copyright holder: Huazhong Agricultural University" data-zh="著作权人：华中农业大学">Copyright holder: Huazhong Agricultural University</p></div>
+    </div>
+    <div class="cv-certificate">
+      <a href="{{ '/assets/images/cv/animal-mnv-copyright.jpg' | relative_url }}" target="_blank"><img src="{{ '/assets/images/cv/animal-mnv-copyright.jpg' | relative_url }}" alt="Animal-MNVdb software copyright registration certificate"></a>
+      <div><strong data-en="Multinucleotide Variant Database Platform for Multiple Animal Species (Animal-MNVdb) V1.0" data-zh="多个动物物种的多核苷酸变异数据库平台（Animal-MNVdb）V1.0">Multinucleotide Variant Database Platform for Multiple Animal Species (Animal-MNVdb) V1.0</strong><p>2026SR0290092 · 2026</p><p data-en="Copyright holder: Huazhong Agricultural University" data-zh="著作权人：华中农业大学">Copyright holder: Huazhong Agricultural University</p></div>
+    </div>
+  </section>
+  <section class="cv-section">
+    <h2 data-en="Honors &amp; Awards" data-zh="获得荣誉">Honors &amp; Awards</h2>
+    <ul class="cv-awards">
+      <li data-en="Third Prize, National English Competition for College Students — undergraduate (2022) and graduate (2024)" data-zh="全国大学生英语竞赛三等奖，本科组（2022）及研究生组（2024）">Third Prize, National English Competition for College Students — undergraduate (2022) and graduate (2024)</li>
+      <li data-en="Provincial Third Prize, Blue Bridge Cup Python Programming Competition, University Group A (2022)" data-zh="蓝桥杯 Python 程序设计大学 A 组省级三等奖（2022）">Provincial Third Prize, Blue Bridge Cup Python Programming Competition, University Group A (2022)</li>
+      <li data-en="Outstanding Bachelor’s Thesis, Wuhan University of Technology" data-zh="武汉理工大学优秀学士学位论文">Outstanding Bachelor’s Thesis, Wuhan University of Technology</li>
+      <li data-en="Outstanding Undergraduate Graduate, Wuhan University of Technology" data-zh="武汉理工大学优秀本科毕业生">Outstanding Undergraduate Graduate, Wuhan University of Technology</li>
+      <li data-en="Bronze Award, Hubei Provincial Volunteer Service Competition (2020)" data-zh="湖北省志愿服务大赛铜奖（2020）">Bronze Award, Hubei Provincial Volunteer Service Competition (2020)</li>
+      <li data-en="First-Class Graduate Academic Scholarship, Huazhong Agricultural University (2023)" data-zh="华中农业大学甲等研究生学业奖学金（2023）">First-Class Graduate Academic Scholarship, Huazhong Agricultural University (2023)</li>
+    </ul>
+  </section>
+  <section class="cv-section">
+    <h2 data-en="Experience &amp; Skills" data-zh="经验与技能">Experience &amp; Skills</h2>
+    <p data-en="My research interests include computational genomics, precision medicine, synthetic biology, and biopharmaceutical research and development. My work spans algorithms, models, online analysis platforms, databases, AI agents, and multi-omics analysis." data-zh="我感兴趣的研究方向为计算基因组、精准医疗、合成生物以及生物医药研发，我的工作涵盖算法、模型、在线分析平台、数据库、AI agent 的开发以及基于多组学的分析。">My research interests include computational genomics, precision medicine, synthetic biology, and biopharmaceutical research and development. My work spans algorithms, models, online analysis platforms, databases, AI agents, and multi-omics analysis.</p>
+    <div class="cv-skill-groups">
+      <div><h3 data-en="Research &amp; Development" data-zh="研究与开发">Research &amp; Development</h3><div class="cv-tags"><span data-en="Algorithms" data-zh="算法">Algorithms</span><span data-en="Models" data-zh="模型">Models</span><span data-en="Online Analysis Platforms" data-zh="在线分析平台">Online Analysis Platforms</span><span data-en="Databases" data-zh="数据库">Databases</span><span>AI Agent</span><span data-en="Multi-omics" data-zh="多组学">Multi-omics</span><span data-en="Genome Assembly &amp; Pangenomics" data-zh="基因组组装与泛基因组">Genome Assembly &amp; Pangenomics</span><span data-en="Population Genetics" data-zh="群体遗传">Population Genetics</span><span data-en="Protein &amp; Small-molecule Design" data-zh="蛋白质与小分子设计">Protein &amp; Small-molecule Design</span></div></div>
+      <div><h3 data-en="Programming &amp; Web Development" data-zh="编程与网站开发">Programming &amp; Web Development</h3><div class="cv-tags"><span>R</span><span>Python</span><span>Linux</span><span>Vue</span><span>Nuxt3</span><span>Flask</span><span>AngularJS</span><span>MongoDB</span><span>PostgreSQL</span></div></div>
+      <div><h3 data-en="Qualifications" data-zh="语言与资格">Qualifications</h3><div class="cv-tags"><span data-en="CET-6 · 587" data-zh="英语 CET-6 · 587 分">CET-6 · 587</span><span data-en="National Computer Rank Examination · Level 2" data-zh="全国计算机等级考试二级">National Computer Rank Examination · Level 2</span><span data-en="Mandarin Proficiency · Level 2-A" data-zh="普通话二级甲等">Mandarin Proficiency · Level 2-A</span></div></div>
+    </div>
+  </section>
+  <section class="cv-section">
+    <h2 data-en="Internship" data-zh="实习经历">Internship</h2>
+    <div class="cv-internship"><strong data-en="bio-info-trainee · Zhuhai Jianming Biopharmaceutical Technology" data-zh="生信技能树（珠海健明生物医药科技）">bio-info-trainee · Zhuhai Jianming Biopharmaceutical Technology</strong><time data-en="Jan – Sep 2023" data-zh="2023 年 1 月—9 月">Jan – Sep 2023</time></div>
+    <p data-en="Single-cell RNA-seq analysis, bioinformatics tutorial writing, and support for users’ bioinformatics analysis questions." data-zh="单细胞 RNA 测序分析、生信技能教程公众号推文撰写，以及用户生信分析问题处理。">Single-cell RNA-seq analysis, bioinformatics tutorial writing, and support for users’ bioinformatics analysis questions.</p>
+  </section>
+</article>
+<script src="{{ '/assets/js/cv.js' | relative_url }}" defer></script>
