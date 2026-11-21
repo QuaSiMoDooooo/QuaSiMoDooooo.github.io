@@ -9,7 +9,7 @@ navbar_title: My-CV
     <button type="button" data-set-language="en" aria-pressed="true">English</button>
     <button type="button" data-set-language="zh" aria-pressed="false">中文</button>
   </div>
-  <a class="cv-download" id="cv-download" href="{{ '/assets/cv/tian-wu-cv-en.pdf?v=10' | relative_url }}" data-en-href="{{ '/assets/cv/tian-wu-cv-en.pdf?v=10' | relative_url }}" data-zh-href="{{ '/assets/cv/tian-wu-cv-zh.pdf?v=10' | relative_url }}" download><i class="fas fa-download" aria-hidden="true"></i> <span data-en="Download PDF" data-zh="下载 PDF">Download PDF</span></a>
+  <a class="cv-download" id="cv-download" href="{{ '/assets/cv/tian-wu-cv-en.pdf?v=11' | relative_url }}" data-en-href="{{ '/assets/cv/tian-wu-cv-en.pdf?v=11' | relative_url }}" data-zh-href="{{ '/assets/cv/tian-wu-cv-zh.pdf?v=11' | relative_url }}" download><i class="fas fa-download" aria-hidden="true"></i> <span data-en="Download PDF" data-zh="下载 PDF">Download PDF</span></a>
 </div>
 <article class="cv-sheet">
   <header class="cv-header">
@@ -34,7 +34,7 @@ navbar_title: My-CV
     {% for item in site.data.profile.education %}
     <div class="cv-education">
       <img src="{{ item.logo | relative_url }}" alt="" width="36" height="36">
-      <div><h3 data-en="{{ item.name | escape }}" data-zh="{% if forloop.index == 1 %}中山大学{% elsif forloop.index == 2 %}华中农业大学{% else %}武汉理工大学{% endif %}">{{ item.name }}</h3>
+      <div><h3 data-en="{{ item.name | escape }}{% if forloop.index == 2 %} (Recommended, exam waived){% endif %}" data-zh="{% if forloop.index == 1 %}中山大学{% elsif forloop.index == 2 %}华中农业大学（免试保送）{% else %}武汉理工大学{% endif %}">{{ item.name }}{% if forloop.index == 2 %} (Recommended, exam waived){% endif %}</h3>
       <p data-en="{% if forloop.index == 1 %}School of Agriculture and Biotechnology · PhD in Bioinformatics{% elsif forloop.index == 2 %}College of Informatics · Master of Bioinformatics{% else %}Dual Bachelor's degrees in Pharmaceutical Engineering and Biochemistry{% endif %}" data-zh="{% if forloop.index == 1 %}农业与生物技术学院 · 生物信息学方向 · 博士{% elsif forloop.index == 2 %}信息学院 · 生物信息学硕士{% else %}制药工程和生物化学双学士{% endif %}">{% if forloop.index == 1 %}School of Agriculture and Biotechnology · PhD in Bioinformatics{% else %}{% if item.dept %}{{ item.dept }} · {% endif %}{{ item.position }}{% endif %}</p></div>
       <time data-en="{{ item.date }}" data-zh="{% if forloop.index == 1 %}2026 年 9 月至今{% elsif forloop.index == 2 %}2023 年 9 月—2026 年 6 月{% else %}2019 年 9 月—2023 年 6 月{% endif %}">{{ item.date }}</time>
     </div>
