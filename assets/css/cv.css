@@ -65,14 +65,15 @@
     .cv-header h1 { font-size: 19pt; }
     .cv-avatar { width: 68px; height: 68px; }
     .cv-heading { min-height: 68px; gap: .25rem; }
-    .cv-section { margin-top: .8rem; }
+    .cv-section { margin-top: .55rem; }
     .cv-section h2 { margin-bottom: .4rem; font-size: 12pt; }
     .cv-education { margin: .4rem 0; }
     .cv-publications li { padding: .3rem 0; }
     .cv-paper-image { width: 45px; height: 50px; margin-right: .45rem; }
     .cv-certificate img { width: 48px; height: 68px; }
     .cv-certificate { grid-template-columns: 48px 1fr; gap: .6rem; padding: .3rem 0; }
-    .cv-tags span { padding: .12rem .4rem; }
+    .cv-tags span { padding: .12rem .35rem; font-size: .8rem; }
+    .cv-skill-groups { gap: .65rem; }
     .cv-section h2, .cv-subheading { break-after: avoid; }
     .cv-education, .cv-certificate, .cv-awards li, .cv-skill-groups > div { break-inside: avoid; }
     a { color: inherit; text-decoration: none; }
