@@ -29,6 +29,7 @@
 .cv-details dd { margin: 0; font-weight: 600; }
 .cv-education { display: grid; grid-template-columns: 36px minmax(0, 1fr) auto; gap: .8rem; align-items: start; margin: .85rem 0; }
 .cv-education img { object-fit: contain; }
+.cv-admission:empty { display: none; }
 .cv-education h3, .cv-skill-groups h3 { margin: 0; font-size: 1rem; }
 .cv-education p, .cv-certificate p, .cv-publications p { margin: .15rem 0 0; color: #526574; font-size: .9rem; }
 .cv-education time, .cv-internship time { color: #607486; font-size: .85rem; }
@@ -72,7 +73,7 @@
     .cv-section { margin-top: .55rem; }
     .cv-section h2 { margin-bottom: .4rem; font-size: 12pt; }
     .cv-education { margin: .4rem 0; }
-    .cv-publications li { padding: .3rem 0; }
+    .cv-publications li { padding: .2rem 0; }
     .cv-paper-image { width: 45px; height: 50px; margin-right: .45rem; }
     .cv-certificate img { width: 48px; height: 68px; }
     .cv-certificate { grid-template-columns: 48px 1fr; gap: .6rem; padding: .3rem 0; }
