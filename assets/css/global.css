@@ -286,3 +286,13 @@ div.lazy {
         gap: 0.375rem;
     }
 }
+
+@media (min-width: 768px) {
+    .homepage-profile {
+        width: calc(16.25rem + 30px);
+    }
+
+    .homepage-profile + .col-md {
+        min-width: 0;
+    }
+}
