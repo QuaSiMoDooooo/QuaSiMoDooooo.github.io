@@ -295,8 +295,9 @@ div.lazy {
     }
 
     .homepage-profile .profile-sidebar {
-        position: sticky;
+        position: fixed;
         top: 80px;
+        width: 230px;
         max-height: calc(100vh - 96px);
         overflow-y: auto;
     }
