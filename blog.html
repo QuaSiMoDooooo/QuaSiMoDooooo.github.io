@@ -4,7 +4,7 @@ title: Blog
 navbar_title: Blog
 ---
 <section class="blog-index bg-white shadow-sm rounded-xl">
-  <header><h1>Blog</h1><p>Articles originally published on <strong>BioKernel</strong> · 微信公众号<br><small>按公众号合集筛选；点击标题阅读微信原文。</small></p></header>
+  <header><h1>Blog</h1><p>Articles originally published on <strong>BioKernel</strong> · 微信公众号</p></header>
   {% assign groups = site.data.biokernel | map: "categories" | join: "|" | split: "|" | uniq | sort %}
   <div class="blog-filters" aria-label="文章合集分类"><button class="active" data-category="all" aria-pressed="true">全部</button>{% for group in groups %}<button data-category="{{ group | escape }}" aria-pressed="false">{{ group | escape }}</button>{% endfor %}</div>
   <ol class="blog-list">
