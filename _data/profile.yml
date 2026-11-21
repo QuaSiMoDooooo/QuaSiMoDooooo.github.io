@@ -12,12 +12,15 @@ short_bio: >-
   My research interests include bioinformatics, computational genomics, biomedicine, precision medicine, and synthetic biology.</p>
 education:
 - name: Sun Yat-sen University
+  logo: /assets/images/badges/sysu.png
   dept: School of Agriculture and Biotechnology
   position: PhD
   date: Sep 2026 – present
 - name: Huazhong Agricultural University
+  logo: /assets/images/badges/hzau.png
   dept: College of Informatics
   position: Master's studies
   date: Sep 2023 – Jun 2026
 - name: Wuhan University of Technology
+  logo: /assets/images/badges/whut.png
   date: Sep 2019 – Jun 2023
