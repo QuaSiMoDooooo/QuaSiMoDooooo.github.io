@@ -3,22 +3,21 @@ layout: default
 title: My CV
 navbar_title: My-CV
 ---
-<link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}?v=2">
 <div class="cv-toolbar">
   <div class="cv-language" role="group" aria-label="CV language">
     <button type="button" data-set-language="en" aria-pressed="true">English</button>
     <button type="button" data-set-language="zh" aria-pressed="false">中文</button>
   </div>
-  <a class="cv-download" id="cv-download" href="{{ '/assets/cv/tian-wu-cv-en.pdf' | relative_url }}" data-en-href="{{ '/assets/cv/tian-wu-cv-en.pdf' | relative_url }}" data-zh-href="{{ '/assets/cv/tian-wu-cv-zh.pdf' | relative_url }}" download><i class="fas fa-download" aria-hidden="true"></i> <span data-en="Download PDF" data-zh="下载 PDF">Download PDF</span></a>
+  <a class="cv-download" id="cv-download" href="{{ '/assets/cv/tian-wu-cv-en.pdf?v=2' | relative_url }}" data-en-href="{{ '/assets/cv/tian-wu-cv-en.pdf?v=2' | relative_url }}" data-zh-href="{{ '/assets/cv/tian-wu-cv-zh.pdf?v=2' | relative_url }}" download><i class="fas fa-download" aria-hidden="true"></i> <span data-en="Download PDF" data-zh="下载 PDF">Download PDF</span></a>
 </div>
 <article class="cv-sheet">
   <header class="cv-header">
-    <div>
-      <p class="cv-eyebrow" data-en="CURRICULUM VITAE" data-zh="个人简历">CURRICULUM VITAE</p>
-      <h1 data-en="Tian Wu" data-zh="吴天">Tian Wu</h1>
-      <p class="cv-subtitle" data-en="PhD student · Bioinformatics" data-zh="博士研究生 · 生物信息学">PhD student · Bioinformatics</p>
-    </div>
     <img src="{{ site.data.profile.portrait_url | relative_url }}" class="cv-avatar" alt="Tian Wu" width="104" height="104">
+    <div class="cv-heading">
+      <h1 data-en="Tian Wu" data-zh="吴天">Tian Wu</h1>
+      <p class="cv-major" data-en="Bioinformatics" data-zh="生物信息学">Bioinformatics</p>
+    </div>
   </header>
   <section class="cv-section">
     <h2 data-en="Personal Details" data-zh="基本资料">Personal Details</h2>

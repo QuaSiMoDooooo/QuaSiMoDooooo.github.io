@@ -1,3 +1,6 @@
+.cv-toolbar, .cv-sheet {
+    font-family: "Times New Roman", SimSun, serif;
+}
 .cv-toolbar {
     display: flex;
     justify-content: flex-end;
@@ -12,10 +15,10 @@
 .cv-download { background: #215e89; color: white; }
 .cv-download:hover, .cv-download:focus { color: white; text-decoration: none; background: #194e73; }
 .cv-sheet { max-width: 960px; margin: 0 auto 3rem; padding: clamp(1.25rem, 4vw, 3.5rem); border: 1px solid #dce6ed; border-radius: 12px; background: white; box-shadow: 0 6px 25px rgba(38, 59, 76, 0.06); color: #213243; }
-.cv-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-bottom: 1.5rem; border-bottom: 2px solid #295f7e; }
-.cv-header h1 { margin: 0.2rem 0; font-size: clamp(2rem, 4vw, 2.8rem); }
-.cv-eyebrow { margin: 0; color: #397699; letter-spacing: 0.13em; font-size: .75rem; font-weight: 700; }
-.cv-subtitle { margin: 0; color: #5b7082; }
+.cv-header { display: flex; align-items: center; justify-content: center; gap: 1.25rem; padding-bottom: 1.5rem; border-bottom: 2px solid #295f7e; }
+.cv-heading { display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; min-height: 104px; }
+.cv-header h1 { margin: 0; font-size: clamp(2.5rem, 4vw, 3.2rem); line-height: 1.05; }
+.cv-major { margin: 0; color: #526574; font-size: 1.125rem; line-height: 1.25; }
 .cv-avatar { flex: 0 0 auto; border: 4px solid #edf4f7; border-radius: 50%; object-fit: cover; }
 .cv-section { margin-top: 1.8rem; }
 .cv-section h2 { margin: 0 0 1rem; padding-bottom: .45rem; border-bottom: 1px solid #dce6ed; color: #245c79; font-size: 1.15rem; }
@@ -49,6 +52,7 @@
     .cv-education { grid-template-columns: 36px minmax(0, 1fr); }
     .cv-education time { grid-column: 2; }
     .cv-avatar { width: 80px; height: 80px; }
+    .cv-heading { min-height: 80px; }
     .cv-internship { flex-direction: column; gap: .2rem; }
 }
 @media print {
@@ -60,6 +64,7 @@
     .cv-header { padding-bottom: .5rem; }
     .cv-header h1 { font-size: 21pt; }
     .cv-avatar { width: 68px; height: 68px; }
+    .cv-heading { min-height: 68px; gap: .25rem; }
     .cv-section { margin-top: .8rem; }
     .cv-section h2 { margin-bottom: .4rem; font-size: 12pt; }
     .cv-education { margin: .4rem 0; }
