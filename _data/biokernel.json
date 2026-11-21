@@ -3,240 +3,327 @@
     "date": "2026-08-13",
     "title": "让 AI 真正学会开发 R 包：developing-r-packages Skill 深度拆解",
     "url": "https://mp.weixin.qq.com/s/QRQta_7j9vMfp70EeZF_wg",
-    "category": "R包开发"
+    "categories": [
+      "R包开发"
+    ]
   },
   {
     "date": "2026-08-09",
     "title": "文献分享 NC | ccsmeth：利用 PacBio HiFi 动力学信号实现 5mCpG 检测与甲基化分相",
     "url": "https://mp.weixin.qq.com/s/-4bHRNe6NppbJtvrJD8_hg",
-    "category": "DNA修饰"
+    "categories": [
+      "DNA修饰"
+    ]
   },
   {
     "date": "2026-08-06",
     "title": "文献分享 BIB | 从多视图学习到机制解释：IMVRL-GCN 融合多组学数据识别癌基因",
     "url": "https://mp.weixin.qq.com/s/tNiLsuzBQe7Sb72C8vbq1w",
-    "category": "GNN"
+    "categories": [
+      "GNN"
+    ]
   },
   {
     "date": "2026-08-04",
     "title": "图自监督学习：标准分类、经典模型结构与方法演进",
     "url": "https://mp.weixin.qq.com/s/PMKdb4Z3IKy5cEKcO-H0_g",
-    "category": "GNN"
+    "categories": [
+      "GNN"
+    ]
   },
   {
     "date": "2026-08-03",
     "title": "文献分享 Cell | UniPert-G2CP：从统一分子表征到遗传—化学扰动表型迁移",
     "url": "https://mp.weixin.qq.com/s/-vwd5aQbu7-GYTU4WlIw3w",
-    "category": "虚拟筛选"
+    "categories": [
+      "虚拟筛选"
+    ]
   },
   {
     "date": "2026-08-01",
     "title": "molecular-io：让 AI 真正理解分子结构文件，而不只是完成格式转换",
     "url": "https://mp.weixin.qq.com/s/-tPxDfV7VVv9ipqEX9TACQ",
-    "category": "药物信息"
+    "categories": [
+      "药物信息"
+    ]
   },
   {
     "date": "2026-07-31",
     "title": "文献分享 NMI | MoLFormer：仅凭 SMILES，十亿级化学语言模型能否学会分子结构与性质？",
     "url": "https://mp.weixin.qq.com/s/8brWvJhCYXPkoQ8ZMx_UkA",
-    "category": "LLM"
+    "categories": [
+      "LLM"
+    ]
   },
   {
     "date": "2026-07-30",
     "title": "scTenifold Virtual Perturbation Skill",
     "url": "https://mp.weixin.qq.com/s/bky2dBt8jlUL92PfqHYYfw",
-    "category": "虚拟筛选"
+    "categories": [
+      "虚拟筛选"
+    ]
   },
   {
     "date": "2026-07-29",
     "title": "文献分享 NMI | 从多模态表征到百万级虚拟筛选：GerNA-Bind 如何预测 RNA–小分子结合特异性",
     "url": "https://mp.weixin.qq.com/s/JRR5nTCJiJ7bvOKr2pg8pQ",
-    "category": "RNA-小分子配体"
+    "categories": [
+      "RNA-小分子配体"
+    ]
   },
   {
     "date": "2026-07-25",
     "title": "从虚拟过表达、虚拟敲除到虚拟筛药：三种虚拟计算方法全解析",
     "url": "https://mp.weixin.qq.com/s/4N5VtFObuR781Lwe0sMa7Q",
-    "category": "虚拟筛选"
+    "categories": [
+      "虚拟筛选"
+    ]
   },
   {
     "date": "2026-07-23",
     "title": "文献分享 Science | 利用转录组学的主动学习框架识别疾病表型调控化合物",
     "url": "https://mp.weixin.qq.com/s/RHwvgs8i5GcLvNBFkfTjtg",
-    "category": "待核对"
+    "categories": [
+      "虚拟筛选"
+    ]
   },
   {
     "date": "2026-07-20",
     "title": "文献分享 NBT | 无需 RNA 三维结构预测小分子–RNA 相互作用",
     "url": "https://mp.weixin.qq.com/s/CcV1IPBUBMKApzPrB7cWdA",
-    "category": "待核对"
+    "categories": [
+      "RNA-小分子配体"
+    ]
   },
   {
     "date": "2026-07-19",
     "title": "文献分享 NCS | 通过数据扰动和增强建模进行 RNA-配体相互作用评分",
     "url": "https://mp.weixin.qq.com/s/N3PUSRXyQxnX04Wrlo3hbA",
-    "category": "待核对"
+    "categories": [
+      "RNA-小分子配体"
+    ]
   },
   {
     "date": "2026-01-16",
     "title": "hello-agents 智能体经典范式构建之ReAct 实战",
     "url": "https://mp.weixin.qq.com/s/AqXD-YKHQtqw55QUWH_W3A",
-    "category": "待核对"
+    "categories": [
+      "Agent"
+    ]
   },
   {
     "date": "2026-01-15",
     "title": "mRNA | 关于“病毒通过阻止 RNA 环化来逃避宿主的密码子使用控制，从而保证自身蛋白的高效合成”的一些思考",
     "url": "https://mp.weixin.qq.com/s/KcgmiwhiHrNi1swFPGGquw",
-    "category": "待核对"
+    "categories": [
+      "mRNA"
+    ]
   },
   {
     "date": "2026-01-13",
     "title": "siRNA | 普乐司兰钠通过沉默肝脏APOC3基因降低FCS甘油三酯水平",
     "url": "https://mp.weixin.qq.com/s/goQVkhOuFAfZmcD2MQ4OuQ",
-    "category": "待核对"
+    "categories": [
+      "siRNA"
+    ]
   },
   {
     "date": "2026-01-12",
     "title": "Benchmark | Nat. Commun. | 对预训练基因组语言模型进行 RNA 序列相关预测应用的基准测试",
     "url": "https://mp.weixin.qq.com/s/z9XXzNBq4W1zmJ13-A78YQ",
-    "category": "待核对"
+    "categories": [
+      "LLM"
+    ]
   },
   {
     "date": "2026-01-03",
     "title": "综述 | Drug Discov. Today | 人工智能在小核酸治疗药物开发中的应用",
     "url": "https://mp.weixin.qq.com/s/ILOHbIyKCw-i2dD-SHf44g",
-    "category": "待核对"
+    "categories": [
+      "DRP"
+    ]
   },
   {
     "date": "2025-12-29",
     "title": "文献分享 J. Transl. Med. | 迁移学习 | TRANSPIRE-DRP基于领域自适应的PDX临床药物反应转化框架",
     "url": "https://mp.weixin.qq.com/s/ybQntDhLI_of8Hyznf7lnw",
-    "category": "待核对"
+    "categories": [
+      "DRP"
+    ]
   },
   {
     "date": "2025-12-28",
     "title": "文献分享 BIB | 少样本学习 | MetaSynergy：基于快速跨层自适应元优化的少样本药物协同作用预测",
     "url": "https://mp.weixin.qq.com/s/Nc4XlGDUiQLJy_P7FSvagg",
-    "category": "待核对"
+    "categories": [
+      "DRP"
+    ]
   },
   {
     "date": "2025-12-27",
     "title": "使用openrouter GPT4/Gemini3 API 测试Paper2Slides",
     "url": "https://mp.weixin.qq.com/s/d7gpx9cKLVNu0LGVA5haZQ",
-    "category": "待核对"
+    "categories": [
+      "AI"
+    ]
   },
   {
     "date": "2025-12-26",
     "title": "Saliency Map、Grad-CAM、Integrated Gradient的区别（CNN实战演示）",
     "url": "https://mp.weixin.qq.com/s/l66EfGxT0_C7ypMyehMZjw",
-    "category": "待核对"
+    "categories": [
+      "DL深度学习"
+    ]
   },
   {
     "date": "2025-12-23",
     "title": "Pytorch构建深度学习模型（LIN、CNN、TransformerEncoder）预测 DNA 序列分数",
     "url": "https://mp.weixin.qq.com/s/cDJ0QifN3-upYaAI-SZuvQ",
-    "category": "待核对"
+    "categories": [
+      "DL深度学习"
+    ]
   },
   {
     "date": "2025-12-11",
     "title": "从表达谱到Cibersort免疫浸润全流程封装",
     "url": "https://mp.weixin.qq.com/s/WxkT-K9zAbq6ffPLya19YQ",
-    "category": "待核对"
+    "categories": [
+      "RNAseq"
+    ]
   },
   {
     "date": "2025-12-10",
     "title": "单细胞拟时序分析（Monocle2+CytoTRACE2）",
     "url": "https://mp.weixin.qq.com/s/X1UkMHOBvQi5T_n3-HV_Xw",
-    "category": "待核对"
+    "categories": [
+      "单细胞"
+    ]
   },
   {
     "date": "2025-12-06",
     "title": "Transformer-encoder模型简单实现和注意力可视化",
     "url": "https://mp.weixin.qq.com/s/52xy9ykhAKJcIlTCzNTm6Q",
-    "category": "待核对"
+    "categories": [
+      "DL深度学习"
+    ]
   },
   {
     "date": "2025-12-04",
     "title": "linux服务器上传文件到百度网盘",
     "url": "https://mp.weixin.qq.com/s/I4DpymtikQwJP9ilcea1dw",
-    "category": "待核对"
+    "categories": [
+      "服务器"
+    ]
   },
   {
     "date": "2025-12-03",
     "title": "自注意力相关变体（多头交叉、因果掩码）基础和简单实现",
     "url": "https://mp.weixin.qq.com/s/WNBttzCyQe2MJlQzm1NJcA",
-    "category": "待核对"
+    "categories": [
+      "DL深度学习"
+    ]
   },
   {
     "date": "2025-12-02",
     "title": "自注意力基础和简单实现",
     "url": "https://mp.weixin.qq.com/s/EaaJkx7VhVnutDxXb4GPpA",
-    "category": "待核对"
+    "categories": [
+      "DL深度学习"
+    ]
   },
   {
     "date": "2025-11-29",
     "title": "GAN生成对抗网络详解：MNIST手写数字生成实战",
     "url": "https://mp.weixin.qq.com/s/UrqXiCStZCtfT-ujHFtzuQ",
-    "category": "待核对"
+    "categories": [
+      "DL深度学习"
+    ]
   },
   {
     "date": "2025-11-23",
     "title": "vscode通过跳板机连接远程服务器",
     "url": "https://mp.weixin.qq.com/s/iWs63eDSo4FTLKQZxPtmRw",
-    "category": "待核对"
+    "categories": [
+      "服务器"
+    ]
   },
   {
     "date": "2025-11-21",
     "title": "hugging face平台数据集的三种下载方法",
     "url": "https://mp.weixin.qq.com/s/uEhlMACNyvV44cMkpG26AQ",
-    "category": "待核对"
+    "categories": [
+      "DL深度学习"
+    ]
   },
   {
     "date": "2025-08-27",
     "title": "rnanorm快速进行RNAseq标准化 | 附GTF文件提取基因长度",
     "url": "https://mp.weixin.qq.com/s/QZ9elPgUaYz3ppTcMW3t_A",
-    "category": "待核对"
+    "categories": [
+      "RNAseq"
+    ]
   },
   {
     "date": "2025-08-22",
     "title": "NGS全基因组测序GATK鉴定SNP自动化流程",
     "url": "https://mp.weixin.qq.com/s/Jkg9VUYoMPF1eBWui-QLPg",
-    "category": "待核对"
+    "categories": [
+      "遗传变异"
+    ]
   },
   {
     "date": "2025-08-21",
     "title": "批量免疫治疗队列基于逻辑回归生成森林图和ROC曲线",
     "url": "https://mp.weixin.qq.com/s/mGTGOHxNsrLpa8U3oP15PA",
-    "category": "待核对"
+    "categories": [
+      "biostatistics"
+    ]
   },
   {
     "date": "2025-03-07",
     "title": "ESMfold预测蛋白质结构",
     "url": "https://mp.weixin.qq.com/s/uJX_lbVLXj43cJ9dVmL4qQ",
-    "category": "待核对"
+    "categories": [
+      "LLM",
+      "环境搭建",
+      "蛋白质结构"
+    ]
   },
   {
     "date": "2025-02-28",
     "title": "seqkit提取NCBI指定染色体的序列文件并并修改为常用ID",
     "url": "https://mp.weixin.qq.com/s/-t3SRpGZ29ZYvHPZtafYbA",
-    "category": "待核对"
+    "categories": [
+      "序列处理",
+      "id转换",
+      "genome"
+    ]
   },
   {
     "date": "2025-02-26",
     "title": "对chr_pos/rsid进行id转换并基因和通路注释",
     "url": "https://mp.weixin.qq.com/s/2XlcxdsfwF6FnDBi2O9I1w",
-    "category": "待核对"
+    "categories": [
+      "id转换",
+      "注释"
+    ]
   },
   {
     "date": "2025-02-23",
     "title": "本地不同版本基因组坐标转换脚本",
     "url": "https://mp.weixin.qq.com/s/TgToFykk-ap2NO3sGybWcQ",
-    "category": "待核对"
+    "categories": [
+      "id转换",
+      "genome"
+    ]
   },
   {
     "date": "2025-02-22",
     "title": "python中快速判断某个一维数组满足什么分布",
     "url": "https://mp.weixin.qq.com/s/e_e0K6ONwwBkjUGVFwEnPg",
-    "category": "待核对"
+    "categories": [
+      "biostatistics",
+      "python"
+    ]
   }
 ]
