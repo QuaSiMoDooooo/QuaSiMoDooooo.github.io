@@ -156,7 +156,7 @@ div.lazy {
     --profile-text: #202b38;
     --profile-muted: #526174;
     --profile-accent: #245994;
-    padding: 1.5rem clamp(0.85rem, 1.65vw, 1.4rem);
+    padding: 1.5rem 0.75rem;
     margin-bottom: 1rem;
     border: 1px solid var(--profile-border);
     border-radius: 0.75rem;
@@ -289,7 +289,9 @@ div.lazy {
 
 @media (min-width: 768px) {
     .homepage-profile {
-        width: calc(16.25rem + 30px);
+        flex: 0 0 260px;
+        width: 260px;
+        max-width: 260px;
     }
 
     .homepage-profile + .col-md {
