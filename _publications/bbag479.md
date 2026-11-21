@@ -1,4 +1,5 @@
 ---
+cover: /assets/images/publications/bbag479.jpg
 title: "Large-scale pleiotropic analysis across cancers reveals shared genetic mechanisms and identifies novel functional genes"
 date: 2026-09-01
 pub: "Briefings in Bioinformatics"
