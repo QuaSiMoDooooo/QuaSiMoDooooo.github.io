@@ -1,79 +1,54 @@
-<div class="row sticky-top" style="top: 80px">
-    <div class="col">
-        <div class="card border-0 shadow-sm bg-white">
-            <div class="card-body px-4 pt-4 pb-3">
-                <div class="row">
-                    <div class="col">
-                        {% if site.data.profile.portrait_url %}
-                        <!-- When the screen is wider than md, float the portrait on the right -->
-                        <div class="figure d-none d-md-block">
-                            <img
-                                src="{{ site.data.profile.portrait_url | relative_url }}"
-                                class="figure-img img-fluid" alt="Tian Wu’s GitHub avatar"
-                                data-toggle="tooltip"
-                                data-placement="top"
-                                title="{{ site.data.profile.portrait_caption }}">
-                        </div>
-                        <div class="mb-3 d-md-none text-center">
-                            <img src="{{ site.data.profile.portrait_url | relative_url }}" class="rounded-circle" style="max-width: 50%;" alt="Portrait">
-                        </div>
-                        {% endif %}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col text-center h4">
-                        {{ site.data.profile.primary_name }}
-                    </div>
-                </div>
+{% assign profile = site.data.profile %}
+<aside class="profile-sidebar" aria-label="About {{ profile.primary_name | escape }}">
+    {% if profile.portrait_url %}
+    <img class="profile-sidebar__portrait" src="{{ profile.portrait_url | relative_url }}" alt="{{ profile.primary_name | escape }}" width="160" height="160">
+    {% endif %}
+    <h1 class="profile-sidebar__name">{{ profile.primary_name | escape }}</h1>
+    <p class="profile-sidebar__position">{{ profile.position_line | escape }}</p>
 
-                <div class="row small">
-                    <div class="col text-center">
-                        {% for position in site.data.profile.positions %}
-                        {{ position.name }}<br/>
-                        {% endfor %}
-                    </div>
-                </div>
+    <ul class="profile-sidebar__contact">
+        {% if profile.location %}
+        <li><i class="fas fa-location-dot" aria-hidden="true"></i><span>{{ profile.location | escape }}</span></li>
+        {% endif %}
+        {% if profile.email %}
+        <li><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:{{ profile.email | escape }}">{{ profile.email | escape }}</a></li>
+        {% endif %}
+    </ul>
 
-
-                <div class="row pt-2">
-                    <div class="col text-center">
-                        {% if site.data.profile.gscholar %}
-                        {%- if site.data.profile.gscholar contains 'scholar.google' -%}
-                        {%- assign gscholar_url = site.data.profile.gscholar -%}
-                        {%- else -%}
-                        {%- assign gscholar_url = 'https://scholar.google.com/citations?user=' | append: site.data.profile.gscholar -%}
-                        {%- endif -%}
-                        <a class="px-1 no-break" target="_blank" href="{{ gscholar_url }}">
-                            <i class="fab fa-google-scholar"></i>
-                        </a>
-                        {% endif %}
-
-                        {% if site.data.profile.github %}
-                        <a class="px-1 no-break" target="_blank" href="https://github.com/{{ site.data.profile.github }}">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        {% endif %}
-
-                        {% if site.data.profile.twitter %}
-                        <a class="px-1 no-break" target="_blank" href="https://twitter.com/{{ site.data.profile.twitter }}">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        {% endif %}
-
-                        {% if site.data.profile.linkedin %}
-                        <a class="px-1 no-break" target="_blank" href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        {% endif %}
-
-                        {% if site.data.profile.orcid %}
-                        <a class="px-1 no-break" target="_blank" href="https://orcid.org/{{ site.data.profile.orcid }}">
-                            <i class="fab fa-orcid"></i> ORCID
-                        </a>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="profile-sidebar__social" role="group" aria-label="Contact and profiles">
+        {% if profile.email %}
+        <a href="mailto:{{ profile.email | escape }}" aria-label="Email" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+        {% endif %}
+        {% if profile.gscholar %}
+        {% if profile.gscholar contains 'scholar.google' %}
+        {% assign scholar_url = profile.gscholar %}
+        {% else %}
+        {% assign scholar_url = 'https://scholar.google.com/citations?user=' | append: profile.gscholar %}
+        {% endif %}
+        <a href="{{ scholar_url | escape }}" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i></a>
+        {% endif %}
+        {% if profile.orcid %}
+        <a href="https://orcid.org/{{ profile.orcid | escape }}" aria-label="ORCID" title="ORCID"><i class="fab fa-orcid" aria-hidden="true"></i></a>
+        {% endif %}
+        {% if profile.github %}
+        <a href="https://github.com/{{ profile.github | escape }}" aria-label="GitHub" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+        {% endif %}
+        {% if profile.twitter %}
+        <a href="https://twitter.com/{{ profile.twitter | escape }}" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        {% endif %}
+        {% if profile.linkedin %}
+        <a href="https://www.linkedin.com/in/{{ profile.linkedin | escape }}" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        {% endif %}
     </div>
-</div>
+
+    {% if profile.research_focus %}
+    <div class="profile-sidebar__research">
+        <h2>Research Focus</h2>
+        <ul>
+            {% for topic in profile.research_focus %}
+            <li>{{ topic | escape }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</aside>

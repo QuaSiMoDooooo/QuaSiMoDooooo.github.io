@@ -3,6 +3,15 @@ navbar_name: Tian Wu
 positions:
 - name: PhD student
 - name: Sun Yat-sen University
+position_line: PhD student at Sun Yat-sen University
+location: Guangzhou, China
+email: fabien012390wt@163.com
+research_focus:
+  - Bioinformatics
+  - Computational Genomics
+  - Biomedicine
+  - Precision Medicine
+  - Synthetic Biology
 github: QuaSiMoDooooo
 orcid: "0009-0004-9043-1214"
 portrait_url: /assets/images/photos/github-avatar.png
