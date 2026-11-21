@@ -294,6 +294,13 @@ div.lazy {
         max-width: 260px;
     }
 
+    .homepage-profile .profile-sidebar {
+        position: sticky;
+        top: 80px;
+        max-height: calc(100vh - 96px);
+        overflow-y: auto;
+    }
+
     .homepage-profile + .col-md {
         min-width: 0;
     }
