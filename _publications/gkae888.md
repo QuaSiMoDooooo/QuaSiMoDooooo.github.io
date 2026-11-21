@@ -2,6 +2,7 @@
 cover: /assets/images/publications/gkae888.jpg?v=2
 title: "miRNASNP-v4: a comprehensive database for miRNA-related SNPs across 17 species"
 date: 2025-01-01
+news_date: 2024-10-16
 pub: "Nucleic acids research"
 pub_date: "2025"
 selected: false

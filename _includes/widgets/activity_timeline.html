@@ -1,4 +1,4 @@
-{% capture event_keys %}{% for paper in site.publications %}{{ paper.date | date: "%Y-%m-%d" }}|p|{{ forloop.index0 }}~{% endfor %}{% for post in site.data.biokernel %}{{ post.date }}|b|{{ forloop.index0 }}~{% endfor %}{% endcapture %}
+{% capture event_keys %}{% for paper in site.publications %}{% assign news_date = paper.news_date | default: paper.date %}{{ news_date | date: "%Y-%m-%d" }}|p|{{ forloop.index0 }}~{% endfor %}{% for post in site.data.biokernel %}{{ post.date }}|b|{{ forloop.index0 }}~{% endfor %}{% endcapture %}
 {% assign ordered_events = event_keys | split: "~" | sort | reverse %}
 <section class="my-3 p-0 bg-white shadow-sm rounded-xl news-card" aria-labelledby="news-heading">
   <h2 class="news-heading border-bottom border-gray p-3 mb-0" id="news-heading"><i class="fas fa-clock-rotate-left" aria-hidden="true"></i> News</h2>
