@@ -15,7 +15,6 @@
             <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
             
             <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                {% if item.cover and item.links.DOI %}<a href="{{ item.links.DOI }}" target="_blank" rel="noopener">[Figure 1 source]</a>{% endif %}
                 {% for link in item.links %}
                 {% if link[1].url %}
                 <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
@@ -43,7 +42,6 @@
                 <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
                 
                 <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                    {% if item.cover and item.links.DOI %}<a href="{{ item.links.DOI }}" target="_blank" rel="noopener">[Figure 1 source]</a>{% endif %}
                 {% for link in item.links %}
                     {% if link[1].url %}
                     <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>

@@ -1,13 +1,13 @@
 ---
 cover: /assets/images/publications/bbag479.jpg
 title: "Large-scale pleiotropic analysis across cancers reveals shared genetic mechanisms and identifies novel functional genes"
-date: 2026-09-01
+date: 2026-09-07
 pub: "Briefings in Bioinformatics"
 pub_date: "2026"
-selected: true
+selected: false
 authors:
-  - "Xiaohong Wu"
-  - "Yuqing Yan"
+  - "Xiaohong Wu*"
+  - "Yuqing Yan*"
   - "Wen Cao"
   - "Tian Wu"
   - "Jiaxing He"

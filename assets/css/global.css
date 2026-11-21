@@ -306,3 +306,27 @@ div.lazy {
         min-width: 0;
     }
 }
+
+/* Publication and blog activity */
+.news-heading {font-size: 1.05rem; font-weight: 700;}
+.news-timeline {list-style:none; margin:0 1.25rem; padding:1.2rem 0 0 1.45rem; border-left:2px solid #d9e5ef;}
+.news-item {position:relative; padding:0 0 1.4rem 1rem;}
+.news-icon {position:absolute; left:-2.16rem; top:.05rem; width:1.35rem; height:1.35rem; display:grid; place-items:center; border-radius:50%; background:#245f87; color:#fff; font-size:.65rem;}
+.news-item--blog .news-icon {background:#7c9cb0; width:1.15rem; height:1.15rem; left:-2.05rem; font-size:.55rem;}
+.news-body time {color:#647b8c; font-size:.83rem; margin-right:.7rem;}
+.news-kind {font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:#245f87; font-weight:700;}
+.news-item--blog .news-body > a {display:block; font-size:.93rem; margin-top:.2rem;}
+.news-paper {display:flex; gap:1rem; align-items:center; margin-top:.5rem;}
+.news-paper img {width:110px; max-height:125px; object-fit:contain; flex-shrink:0;}
+.news-paper p {margin:.2rem 0 0; font-size:.83rem;}
+.news-more {padding:0 1.3rem 1.1rem; text-align:right; margin:0;}
+.blog-index {margin-top:1.5rem; padding:2.3rem;}
+.blog-index header p {color:#647b8c;}
+.blog-list {padding:0; margin:1.6rem 0 0; list-style:none;}
+.blog-list li {display:flex; gap:1.5rem; border-top:1px solid #e4edf2; padding:1rem 0;}
+.blog-list time {color:#687f90; flex:0 0 6rem; font-size:.88rem;}
+.blog-list a {font-weight:700;}
+.blog-list small {display:block; color:#73899b; margin-top:.2rem;}
+@media(max-width:575px){.blog-index{padding:1.4rem}.blog-list li{display:block}.blog-list time{display:block;margin-bottom:.3rem}.news-paper img{width:70px}}
+
+.blog-filters {display:flex; flex-wrap:wrap; gap:.45rem; margin:1.2rem 0}.blog-filters button {border:1px solid #d5e4ee; border-radius:1rem; padding:.28rem .75rem; background:#f5f9fc; color:#365a73}.blog-filters button.active {background:#245f87; color:white}.blog-list li[hidden]{display:none}

@@ -1,0 +1,16 @@
+{% capture event_keys %}{% for paper in site.publications %}{{ paper.date | date: "%Y-%m-%d" }}|p|{{ forloop.index0 }}~{% endfor %}{% for post in site.data.biokernel %}{{ post.date }}|b|{{ forloop.index0 }}~{% endfor %}{% endcapture %}
+{% assign ordered_events = event_keys | split: "~" | sort | reverse %}
+<section class="my-3 p-0 bg-white shadow-sm rounded-xl news-card" aria-labelledby="news-heading">
+  <h2 class="news-heading border-bottom border-gray p-3 mb-0" id="news-heading"><i class="fas fa-clock-rotate-left" aria-hidden="true"></i> News</h2>
+  <ol class="news-timeline">
+    {% for key in ordered_events %}
+      {% assign parts = key | split: "|" %}{% assign ix = parts[2] | plus: 0 %}
+      {% if parts[1] == 'p' %}{% assign item = site.publications[ix] %}
+      <li class="news-item news-item--paper"><span class="news-icon"><i class="fas fa-file-lines" aria-hidden="true"></i></span><div class="news-body"><time>{{ parts[0] }}</time><span class="news-kind">Publication</span><div class="news-paper"><img src="{{ item.cover | relative_url }}" alt="" loading="lazy"><div><strong>{{ item.title | escape }}</strong><p>{% include widgets/author_list.html authors=item.authors %}</p><p><i>{{ item.pub }}</i> · {{ item.pub_date }} · <a href="{{ item.links.DOI }}">DOI</a></p></div></div></div></li>
+      {% else %}{% assign item = site.data.biokernel[ix] %}
+      <li class="news-item news-item--blog"><span class="news-icon"><i class="fas fa-pen-nib" aria-hidden="true"></i></span><div class="news-body"><time>{{ parts[0] }}</time><span class="news-kind">Blog</span><a href="{{ item.url | escape }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a></div></li>
+      {% endif %}
+    {% endfor %}
+  </ol>
+  <p class="news-more"><a href="{{ '/blog' | relative_url }}">All blog posts <i class="fas fa-angle-double-right" aria-hidden="true"></i></a></p>
+</section>

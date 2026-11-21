@@ -1,0 +1,18 @@
+---
+layout: default
+title: Blog
+navbar_title: Blog
+---
+<section class="blog-index bg-white shadow-sm rounded-xl">
+  <header><h1>Blog</h1><p>Articles originally published on <strong>BioKernel</strong> · 微信公众号</p></header>
+  {% assign groups = site.data.biokernel | group_by: "category" | sort: "name" %}
+  <div class="blog-filters" aria-label="文章合集分类"><button class="active" data-category="all" aria-pressed="true">全部</button>{% for group in groups %}<button data-category="{{ group.name | escape }}" aria-pressed="false">{{ group.name | escape }}</button>{% endfor %}</div>
+  <ol class="blog-list">
+    {% assign posts = site.data.biokernel | sort: 'date' | reverse %}
+    {% for post in posts %}<li data-category="{{ post.category | escape }}"><time datetime="{{ post.date }}">{{ post.date }}</time><div><a href="{{ post.url | escape }}" target="_blank" rel="noopener noreferrer">{{ post.title | escape }}</a><small>{{ post.category | escape }} · Read on WeChat <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></small></div></li>{% endfor %}
+  </ol>
+</section>
+
+<script>
+document.querySelectorAll('.blog-filters button').forEach(function(button) { button.addEventListener('click', function() { document.querySelectorAll('.blog-filters button').forEach(function(b){b.classList.remove('active');b.setAttribute('aria-pressed','false')}); button.classList.add('active');button.setAttribute('aria-pressed','true'); document.querySelectorAll('.blog-list li').forEach(function(item){item.hidden=button.dataset.category!=='all' && item.dataset.category!==button.dataset.category}); }); });
+</script>

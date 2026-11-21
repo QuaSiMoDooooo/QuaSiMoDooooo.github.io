@@ -4,10 +4,10 @@ title: "miRNASNP-v4: a comprehensive database for miRNA-related SNPs across 17 s
 date: 2025-01-01
 pub: "Nucleic acids research"
 pub_date: "2025"
-selected: true
+selected: false
 authors:
-  - "Wen Cao"
-  - "Jiaxin He"
+  - "Wen Cao*"
+  - "Jiaxin He*"
   - "Jing Feng"
   - "Xiaohong Wu"
   - "Tian Wu"
