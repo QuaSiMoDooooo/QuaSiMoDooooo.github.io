@@ -6,29 +6,29 @@
     {%- assign last_char = _key | slice: -1, 1%}
     {%- assign last_2chars = _key | slice: -2, 2%}
     {%- if last_2chars == "*#" or last_2chars == "#*" -%}
-        {%- assign key = _key | replace: "#*", "" | replace: "*#", "" -%}
+        {%- assign author_key = _key | replace: "#*", "" | replace: "*#", "" -%}
         {%- assign mark = "<sup>#</sup>*" -%}
         {%- assign has_eq_contrib = true -%}
         {%- assign has_corresponding = true -%}
     {%- elsif last_char == "*" -%}
-        {%- assign key = _key | split: "*" | first -%}
+        {%- assign author_key = _key | split: "*" | first -%}
         {%- assign mark = "<sup>#</sup>" -%}
         {%- assign has_eq_contrib = true -%}
     {%- elsif last_char == "#" -%}
-        {%- assign key = _key | split: "#" | first -%}
+        {%- assign author_key = _key | split: "#" | first -%}
         {%- assign mark = "*" -%}
         {%- assign has_corresponding = true -%}
     {%- else -%}
-        {%- assign key = _key -%}
+        {%- assign author_key = _key -%}
         {%- assign mark = "" -%}
     {%- endif -%}
 
-    {%- assign info = site.data.authors[key] -%}
+    {%- assign info = site.data.authors[author_key] -%}
 
     {%- if info['name'] -%}
         {%- assign name = info['name'] -%}
     {%- else -%}
-        {%- assign name = key -%}
+        {%- assign name = author_key -%}
     {%- endif -%}
 
     {%- if info['bold'] == true -%}
