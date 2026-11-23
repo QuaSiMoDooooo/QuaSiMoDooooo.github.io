@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-11-23",
+    "title": "文献分享 SA | GenNA：让自然语言指导 DNA/RNA 序列生成",
+    "url": "https://mp.weixin.qq.com/s/4LvtGSMNCOZVMPrO601GJg",
+    "categories": [
+      "LLM"
+    ]
+  },
+  {
     "date": "2026-08-13",
     "title": "让 AI 真正学会开发 R 包：developing-r-packages Skill 深度拆解",
     "url": "https://mp.weixin.qq.com/s/QRQta_7j9vMfp70EeZF_wg",
@@ -327,3 +335,4 @@
     ]
   }
 ]
+
