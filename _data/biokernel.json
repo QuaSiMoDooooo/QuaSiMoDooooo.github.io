@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-11-25",
+    "title": "文献分享 NMI | ProteinDT：通过跨模态对比学习实现自然语言引导的蛋白质生成与编辑",
+    "url": "https://mp.weixin.qq.com/s/9k1OX8kTg8bRPj4KV2MN8Q",
+    "categories": [
+      "LLM"
+    ]
+  },
+  {
     "date": "2026-11-23",
     "title": "文献分享 SA | GenNA：让自然语言指导 DNA/RNA 序列生成",
     "url": "https://mp.weixin.qq.com/s/4LvtGSMNCOZVMPrO601GJg",
@@ -335,4 +343,5 @@
     ]
   }
 ]
+
 
