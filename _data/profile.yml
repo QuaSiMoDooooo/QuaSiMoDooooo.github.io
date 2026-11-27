@@ -7,6 +7,7 @@ position_line: PhD student at Sun Yat-sen University
 location: Shenzhen, China
 email: fabien012390wt@163.com
 research_focus:
+  - AI4Science
   - Bioinformatics
   - Computational Genomics
   - Biomedicine
@@ -17,7 +18,7 @@ orcid: "0009-0004-9043-1214"
 portrait_url: /assets/images/photos/github-avatar.png
 portrait_caption: GitHub profile avatar
 short_bio: >-
-  <p>👋 I’m Tian Wu, a PhD student at Sun Yat-sen University. My research interests include computational genomics, precision medicine, synthetic biology, and biopharmaceutical research and development.</p>
+  <p>👋 I’m Tian Wu, a PhD student at Sun Yat-sen University. I am committed to AI4Science research, including but not limited to computational genomics, precision medicine, synthetic biology, and biopharmaceutical research and development.</p>
   <p>🧬 My work spans the development of algorithms, models, online analysis platforms, databases, and AI agents, as well as multi-omics analysis.</p>
   <p>🤝 I welcome research collaborations, internship opportunities, and full-time roles. Please feel free to get in touch by email.</p>
 education:
